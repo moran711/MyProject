@@ -1,0 +1,240 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Trade+Winds&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/index.css">
+    <title>Document</title>
+</head>
+<body>
+    <header>
+        <nav>
+            <img src="img/burger-menu.png" alt="burger menu" class="burger-menu">
+            <div class="menu">
+                <ul>
+                    <li class="menu-element">Головна</li>
+                    <li class="menu-element">Каталог</li>
+                    <li class="menu-element">Доставка</li>
+                    <li class="menu-element">Про компанію</li>
+                    <li class="menu-element">Контакти</li>
+                </ul>
+            </div>
+        </nav>
+        <section class="logo" lang="en">Moran's shop</section>
+        <img src="img/basket.png" alt="basket" class="basket">
+    </header>
+    <main>
+        <section class="slider">
+            <div class="arrowLeft">
+                <img src="img/arrow-left.png" alt="arrow">
+            </div>
+            <div class="sliderContent">
+            <div class="sliderPhoto">
+                <img src="img/slider.jpg" alt="Територія низьких цін">
+            </div>
+            </div>
+            <div class="arrowRight">
+                <img src="img/arrow-right.png" alt="arrow">
+            </div>
+            <div class="sliderShape">
+                <img src="img/shape.png" alt="shape">
+                <img src="img/shape.png" alt="shape">
+            </div>
+        </section>
+        <aside class="filter">
+            <form class="filter-form">
+                <div class="filer-brends" lang="en">
+                    <div class="checkbox" >
+                        <label class="checkbox-item">
+                            <input type="checkbox" name="apple" value="1"> Apple
+                        </label>
+                        <label class="checkbox-item">
+                            <input type="checkbox" name="samsung" value="1"> Samsung
+                        </label>
+                        <label class="checkbox-item">
+                            <input type="checkbox" name="xiaomi" value="1"> Xiaomi
+                        </label>
+                        <label class="checkbox-item">
+                            <input type="checkbox" name="realme" value="1"> Realme
+                        </label>
+                    </div>
+                </div>
+                <p class="sort">Сортування</p>
+                <select class="filter-sort" name="filter-sort"> 
+                    <option value="price_asc">По ціні, спочатку дешевші</option>
+                    <option value="price_desc">По ціні, спочатку дорожчі</option>
+                    <option value="rating_desc">По популярності</option>
+                    <option value="good_asc">По назві, А-Я</option>
+                    <option value="good_desc">По назві, Я-А</option>
+                </select>
+            </form>
+        </aside>
+        <section class="category">
+            <div class="category-name">Усі товари</div>               
+            <div class="items">
+                <div class="item">
+                    <img src="img/xiaomi-redmi-note-8t.jpg" alt="Xiaomi Redmi Note 8T" class="item-pic">
+                    <p class="item-name">Xiaomi Redmi Note 8T</p>
+                    <p class="item-price">3900 грн</p>
+                    <button class="buy">Buy</button>
+                </div>                         
+                <div class="item">
+                    <img src="img/xiaomi-redmi-8.jpg" alt="Xiaomi Redmi 8" class="item-pic">
+                    <p class="item-name">Xiaomi Redmi 8</p>
+                    <p class="item-price">4000 грн</p>
+                    <button class="buy">Buy</button>
+                </div>             
+                <div class="item">
+                    <img src="img/meizu-x8.png" alt="Meizu X8" class="item-pic">
+                    <p class="item-name">Meizu X8 </p>
+                    <p class="item-price">4800 грн</p>
+                    <button class="buy">Buy</button>
+                </div>
+                <div class="item">
+                    <img src="img/huawei-p-smart-2019.jpg" alt="Huawei P Smart 2019" class="item-pic">
+                    <p class="item-name">Huawei P Smart 2019</p>
+                    <p class="item-price">4500 грн</p>
+                    <button class="buy">Buy</button>
+                </div>                          
+                <div class="item">
+                    <img src="img/samsung-galaxy-a10s.jpg" alt="Samsung Galaxy A10s" class="item-pic">
+                    <p class="item-name">Samsung Galaxy A10s</p>
+                    <p class="item-price">3500 грн</p>
+                    <button class="buy">Buy</button>
+                </div>                          
+                <div class="item">
+                    <img src="img/realme-3.jpg" alt="Realme 3" class="item-pic">
+                    <p class="item-name">Realme 3</p>
+                    <p class="item-price">3950</p>
+                    <button class="buy">Buy</button>
+                </div>                           
+                <div class="item">
+                    <img src="img/samsung-galaxy-m30s.jpg" alt="Samsung Galaxy M30s" class="item-pic">
+                    <p class="item-name" lang="en">Samsung Galaxy M30s</p>
+                    <p class="item-price">6000 грн</p>
+                    <button class="buy">Buy</button>
+                </div>                            
+                <div class="item">
+                    <img src="img/samsung-galaxy-s9.jpg" alt="Samsung Galaxy S9" class="item-pic">
+                    <p class="item-name" lang="en">Samsung Galaxy S9</p>
+                    <p class="item-price">12000 грн</p>
+                    <button class="buy">Buy</button>
+                </div>                              
+                <div class="item">
+                    <img src="img/honor-10-lite.jpg" alt="Honor 10 Lite" class="item-pic">
+                    <p class="item-name">Honor 10 Lite</p>
+                    <p class="item-price">4000</p>
+                    <button class="buy">Buy</button>
+                </div>        
+            </div>             
+            <div class="category-name">Популярні товари</div>
+            <div class="items">
+                <div class="item">
+                    <img src="img/samsung-galaxy-m30s.jpg" alt="Samsung Galaxy M30s" class="item-pic">
+                    <p class="item-name" lang="en">Samsung Galaxy M30s</p>
+                    <p class="item-price">6000 грн</p>
+                    <button class="buy">Buy</button>
+                </div>
+                <div class="item">
+                    <img src="img/samsung-galaxy-s9.jpg" alt="Samsung Galaxy S9" class="item-pic">
+                    <p class="item-name" lang="en">Samsung Galaxy S9</p>
+                    <p class="item-price">12000 грн</p>
+                    <button class="buy">Buy</button>
+                </div>
+                <div class="item">
+                    <img src="img/honor-10-lite.jpg" alt="Honor 10 Lite" class="item-pic">
+                    <p class="item-name">Honor 10 Lite</p>
+                    <p class="item-price">4000</p>
+                    <button class="buy">Buy</button>
+                </div>
+            </div>    
+            <div class="category-name">Бюджетний сегмент</div>
+            <div class="items">
+                <div class="item">
+                    <img src="img/xiaomi-redmi-note-8t.jpg" alt="Xiaomi Redmi Note 8T" class="item-pic">
+                    <p class="item-name">Xiaomi Redmi Note 8T</p>
+                    <p class="item-price">3900 грн</p>
+                    <button class="buy">Buy</button>
+                </div>
+                <div class="item">
+                    <img src="img/xiaomi-redmi-8.jpg" alt="Xiaomi Redmi 8" class="item-pic">
+                    <p class="item-name">Xiaomi Redmi 8</p>
+                    <p class="item-price">4000 грн</p>
+                    <button class="buy">Buy</button>
+                </div>
+                <div class="item">
+                    <img src="img/meizu-x8.png" alt="Meizu X8" class="item-pic">
+                    <p class="item-name">Meizu X8 </p>
+                    <p class="item-price">4800 грн</p>
+                    <button class="buy">Buy</button>
+                </div>
+                <div class="item">
+                    <img src="img/huawei-p-smart-2019.jpg" alt="Huawei P Smart 2019" class="item-pic">
+                    <p class="item-name">Huawei P Smart 2019</p>
+                    <p class="item-price">4500 грн</p>
+                    <button class="buy">Buy</button>
+                </div>
+                <div class="item">
+                    <img src="img/samsung-galaxy-a10s.jpg" alt="Samsung Galaxy A10s" class="item-pic">
+                    <p class="item-name">Samsung Galaxy A10s</p>
+                   <p class="item-price">3500 грн</p>
+                    <button class="buy">Buy</button>
+                </div>
+                <div class="item">
+                    <img src="img/realme-3.jpg" alt="Realme 3" class="item-pic">
+                    <p class="item-name">Realme 3</p>
+                    <p class="item-price">3950</p>
+                    <button class="buy">Buy</button>
+                </div>  
+            </div>    
+            <div class="category-name">Флагмани</div>
+            <div class="items">
+                <div class="item">
+                    <img src="img/apple-iphone-11-pro-max.jpg" alt="Apple iPhone 11 Pro Max " class="item-pic">
+                    <p class="item-name">Apple iPhone 11 Pro Max </p>
+                    <p class="item-price">48000 грн</p>
+                    <button class="buy">Buy</button>
+                </div>
+                <div class="item">
+                    <img src="img/oneplus-5t.jpg" alt="OnePlus 5T" class="item-pic">
+                    <p class="item-name">OnePlus 5T</p>
+                    <p class="item-price">16500 грн</p>
+                    <button class="buy">Buy</button>
+                </div>
+                <div class="item">
+                    <img src="img/samsung-galaxy-note-10+.jpg" alt="Samsung Galaxy Note 10+" class="item-pic">
+                    <p class="item-name">Samsung Galaxy Note 10+</p>
+                    <p class="item-price">33000 грн</p>
+                    <button class="buy">Buy</button>
+                </div>
+            </div>    
+        </section>
+    </main>
+    <footer>
+        <div class="footer-stay-tuned">
+            <h1 class="footer-header">Залишайтеся з нами</h1>
+            <p>Підпишіться на соцмережі нашого магазину, щоб бути в курсі подій</p>
+            <img src="img/facebook-icon.png" alt="Фейсбук">
+            <img src="img/instagram-icon.png" alt="Інстаграм">
+        </div>
+        <div class="footer-email-updates">
+            <h1  class="footer-header">Повідомлення на емайл</h1>
+            <p>Будь першим хто почує про акції у нашому магазині</p>
+            <form>
+                <input type="email" name="email" id="user_email" placeholder="email">
+            </form>
+        </div>
+        <div class="footer-contact-us">
+            <h1  class="footer-header">Зв'яжіться з нами</h1>
+            <p>Турбують деякі питання стосовно продукції? Не біда-ми допоможемо:)</p>
+            <button class="footer-contact-us-button">Наш емайл</button>
+        </div>
+        <div class="footer-copyright">
+            Copyright © - Roman Romaniv
+        </div>
+    </footer>
+</body>
+</html>
