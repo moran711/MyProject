@@ -137,25 +137,36 @@ q:after {
 }
 
 /* кінець коду скидання стилів браузера */
+:root{
+    --main-color: #1a2127;
+    --secondary-color: #f74021;
+    --footer-color:#a5aab0;
+    --header-color:white;
+}
 body{
     font-family: 'Open Sans', sans-serif, Verdana;
-}
+    max-width: 980px;
+    margin: auto;
+}    
 header{
     display: flex;
     flex-direction: row;
     justify-content: space-between;
-    height: 30px;
-    background-color: #8EC5FC;
-    background-image: linear-gradient(62deg, #8EC5FC 0%, #E0C3FC 100%);
+    align-content: center;
+    height: 35px;
+    background-color: var(--main-color);
 }
 .burger-menu{
-    height: 28px;
+    height: 30px;
+    padding-left:10px; 
+    width: 45px;
 }
 .menu{
     display: none;
 }
 .basket{
     height: 28px;
+    padding-right: 10px; 
 }
 .buy{
     font-family: 'Open Sans', sans-serif, Verdana;
@@ -163,17 +174,128 @@ header{
 .logo{
     font-family: 'Trade Winds' ;
     font-size: 28px;
+    color: var(--header-color);
+}
+main{
+    margin-bottom: 10px;
+}
+.slider-photo img{
+    width: 100%;
+    z-index: -100;
+}
+.slider-navigation{
+    z-index: 100;
+    display: flex;
+}
+.filter{
+    padding-left: 10px;
+    font-size: 14px;
+}
+main .category{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+} 
+.items .item{
+    width: 280px;
+    margin-top:10px; 
+    height: 620px;
+}
+
+.items .item .item-name{
+    text-align:center;
+}
+.items .item .item-price{
+    padding-left: 10px;
+}
+.category .category-name{
+    font-size: 20px;
+}
+.items .item .buy{
+    text-decoration: none;
+    outline: none;
+    border-radius: 30px;
+    background-image: linear-gradient(45deg, #6ab1d7 0%, #33d9de 50%, #002878 100%);
+    background-position: 100% 0;
+    background-size: 200% 200%;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 16px;
+    font-weight: 300;
+    color: white;
+    box-shadow: 0 16px 32px 0 rgba(0,40,120,.35);
+    transition: .5s;
+    margin: auto;
+    margin-left: 40%;
+    margin-right:  40%;
+}
+
+.items .item .item-pic{
+    width: 270px;
+    height: 500px
 }
 footer{
     background-color: #1a2127;
     color: white;
     font-size: 16px;
 }
-.footer-header {
-    font-style: normal;
-    font-size: 20px;
+footer .footer{
+    display: flex;
+    flex-direction: column;
+    flex-wrap: 10px;
 }
-.footer-copyright{
+
+footer .footer .footer-stay-tuned .footer-social img{
+    height: 25px;
+    width: 25px;
+    margin: auto;
+}
+.footer-stay-tuned, .footer-email-updates, .footer-contact-us{
+    padding-left: 10px;
+    padding-bottom: 10px;
+}
+.footer .footer-header {
+    font-style: normal;
+    font-size: 15px;
+}
+.footer div p{
+    font-size: 12px;
+}
+.footer-contact-us-button{
+    background-color: var(--secondary-color);
+    border: none;
+    color: var(--header-color);
+    border-radius: 10px;
+}
+footer .footer-copyright{
     background-color: #27313b;
     font-size: 14px;
+    display: flex;
+    justify-content: center;
+    height: 20px;
 }
+@media (min-width : 650px){
+    .category .category-name{
+        font-size: 25px;
+    }
+    footer .footer{
+        flex-direction: row;
+    }
+    .items{
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+    }
+    .footer div p{
+         font-size: 15px;
+     }
+    footer .footer .footer-header{
+        font-size: 17px
+    }
+}
+@media (min-width : 900px){
+    .items{
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+    }
+}
+
