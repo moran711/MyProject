@@ -1,0 +1,110 @@
+[
+    {
+        "id": "apple-iphone-11-pro-max",
+        "brand": "Apple",
+        "title": "Apple Iphone 11 PRO MAX",
+        "image": "apple-iphone-11-pro-max.png",
+        "description": "Найкращий телефон у своєму ціновому сегменті!",
+        "price": 40000,
+        "popularity": 1
+    },
+    {
+        "id": "honor-10-lite",
+        "brand": "Huawei",
+        "title": "Honor 10 lite",
+        "image": "honor-10-lite.png",
+        "description": "Найкращий телефон у своєму ціновому сегменті!",
+        "price": 8000,
+        "popularity": 4
+    },
+    {
+        "id": "huawei-p-smart-2019",
+        "brand": "Huawei",
+        "title": "Huawei P Smart 2019",
+        "image": "huawei-p-smart-2019.png",
+        "description": "Найкращий телефон у своєму ціновому сегменті!",
+        "price": 4500,
+        "popularity": 3
+    },
+    {
+        "id": "meizu-x8",
+        "brand": "Meizu",
+        "title": "Meizu X8",
+        "image": "meizu-x8.png",
+        "description": "Найкращий телефон у своєму ціновому сегменті!",
+        "price": 4000,
+        "popularity": 2
+    },
+    {
+        "id": "oneplus-5t",
+        "brand": "OnePlus",
+        "title": "OnePlus 5T",
+        "image": "oneplus-5t.png",
+        "description": "Найкращий телефон у своєму ціновому сегменті!",
+        "price": 15000,
+        "popularity": 8
+    },
+    {
+        "id": "realme-3",
+        "brand": "Realme",
+        "title": "Realme 3",
+        "image": "realme-3.png",
+        "description": "Найкращий телефон у своєму ціновому сегменті!",
+        "price": 3231,
+        "popularity": 6
+    },
+    {
+        "id": "samsung-galaxy-a10s",
+        "brand": "Samsung",
+        "title": "Samsung galaxy A10s",
+        "image": "samsung-galaxy-a10s.png",
+        "description": "Найкращий телефон у своєму ціновому сегменті!",
+        "price": 6000,
+        "popularity": 7
+    },
+    {
+        "id": "samsung-galaxy-m30s",
+        "brand": "Samsung",
+        "title": "Samsung galaxy M30s",
+        "image": "samsung-galaxy-m30s.png",
+        "description": "Найкращий телефон у своєму ціновому сегменті!",
+        "price": 12332,
+        "popularity": 5
+    },
+    {
+        "id": "samsung-galaxy-note-10+",
+        "brand": "Samsung",
+        "title": "Samsung galaxy note 10+",
+        "image": "samsung-galaxy-note-10+.png",
+        "description": "Найкращий телефон у своєму ціновому сегменті!",
+        "price": 20000,
+        "popularity": 9
+    },
+    {
+        "id": "samsung-galaxy-s9",
+        "brand": "Samsung",
+        "title": "Samsung Galaxy S9",
+        "image": "samsung-galaxy-s9.png",
+        "description": "Найкращий телефон у своєму ціновому сегменті!",
+        "price": 5690,
+        "popularity": 11
+    },
+    {
+        "id": "xiaomi-redmi-8",
+        "brand": "Xiaomi",
+        "title": "Xiaomi redmi 8",
+        "image": "xiaomi-redmi-8.png",
+        "description": "Найкращий телефон у своєму ціновому сегменті!",
+        "price": 4655,
+        "popularity": 10
+    },
+    {
+        "id": "xiaomi-redmi-note-8t",
+        "brand": "Xiaomi",
+        "title": "Xiaomi redmi note 8t",
+        "image": "xiaomi-redmi-note-8t.png",
+        "description": "Найкращий телефон у своєму ціновому сегменті!",
+        "price": 4000,
+        "popularity": 12
+    }
+]

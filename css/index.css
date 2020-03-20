@@ -1,4 +1,4 @@
-/* скидання стилів браузера */
+/*скидання стилів браузера
 * {
 	box-sizing: border-box;
 }
@@ -137,6 +137,7 @@ q:after {
 }
 
 /* кінець коду скидання стилів браузера */
+/*
 :root{
     --main-color: #1a2127;
     --secondary-color: #f74021;
@@ -234,6 +235,25 @@ main .category{
     width: 270px;
     height: 500px
 }
+*/
+.main .filter{
+    font-size: 13px;
+}
+.filer-brends .checkbox{
+    display: flex;
+    flex-direction: column;
+}
+.filer-brends .filter-brends-header{
+    font-style: normal;
+    font-size: 15px;
+}
+.filter-form .sort{
+    font-style: normal;
+    font-size: 15px;
+}
+.form-control{
+    margin-right : 10px;
+}
 footer{
     background-color: #1a2127;
     color: white;
@@ -275,6 +295,10 @@ footer .footer-copyright{
     height: 20px;
 }
 @media (min-width : 650px){
+    body .main{
+        display: grid;
+      grid-template-columns: 1fr 4fr;
+    } 
     .category .category-name{
         font-size: 25px;
     }
