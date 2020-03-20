@@ -1,7 +1,7 @@
-class ProductsServise{
+class ProductsService{
     constructor() {
-        if (!ProductsServise._instance) ProductsServise._instance = this;
-        return ProductsServise._instance;
+        if (!ProductsService._instance) ProductsService._instance = this;
+        return ProductsService._instance;
     }
     async getProducts() {
         if (!this.products) {
