@@ -251,6 +251,9 @@ main .category{
     font-style: normal;
     font-size: 15px;
 }
+#products{
+    font-size: 15px;
+}
 .form-control{
     margin-right : 10px;
 }
@@ -315,11 +318,17 @@ footer .footer-copyright{
     footer .footer .footer-header{
         font-size: 17px
     }
+    #products{
+    font-size: 20px;
+}
 }
 @media (min-width : 900px){
     .items{
         display: grid;
         grid-template-columns: 1fr 1fr 1fr;
     }
+    #products{
+    font-size: 25px;
+}
 }
 
