@@ -240,7 +240,7 @@ main .category{
     font-size: 13px;
 }
 
-.filer-brends-checkbox{
+.filter-brends-checkbox{
     display: flex;
     flex-direction: column;
 }
