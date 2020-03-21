@@ -72,6 +72,17 @@ class ProductList {
     this.cart.addProduct(id);
     window.showAlert('Product added to cart');
   }
+  async sortProducts() {
+    const product = await this.productService.getProducts();
+    document.querySelectorAll('checkbox-item input')
+    .forEach(input => input.addEventListener('click', sortByBrend ));
+    function sortByBrend(ev) {
+      if (product.brand === ev.id) {
+          renderProducts();
+          console.log(1);
+      }
+    };
+  }
 }
 
 
