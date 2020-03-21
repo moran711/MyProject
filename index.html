@@ -23,13 +23,7 @@
                         <a class="nav-link" href="#">Головна <span class="sr-only">(current)</span></a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="#">Каталог</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="#">Доставка</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="#">Про компанію</a>
+                        <a class="nav-link" href="#products">Каталог</a>
                     </li>
                     <li class="nav-item">
                         <a class="nav-link" href="#footer">Контакти</a>
@@ -65,20 +59,20 @@
     <div class="main">   
         <aside class="filter">
             <form class="filter-form">
-                <div class="filer-brends" lang="en">
-                    <div class="filter-brends-header">Виберіть бренд</div>    
-                    <div class="checkbox" >
+                <div class="filter-brends" lang="en">
+                    <div class="filter-brends-header" lang="uk">Виберіть бренд</div>    
+                    <div class="filer-brends-checkbox" >
                         <label class="checkbox-item">
-                            <input type="checkbox" name="apple" value="Apple"> Apple
+                            <input type="checkbox" name="apple" value="Apple" id="Apple"> Apple
                         </label>
                         <label class="checkbox-item">
-                            <input type="checkbox" name="samsung" value="Samsung"> Samsung
+                            <input type="checkbox" name="samsung" value="Samsung" id="Samsung"> Samsung
                         </label>
                         <label class="checkbox-item">
-                            <input type="checkbox" name="xiaomi" value="Xiaomi"> Xiaomi
+                            <input type="checkbox" name="xiaomi" value="Xiaomi" id="Xiaomi"> Xiaomi
                         </label>
                         <label class="checkbox-item">
-                            <input type="checkbox" name="realme" value="Realme"> Realme
+                            <input type="checkbox" name="realme" value="Realme" id="Realme"> Realme
                         </label>
                     </div>
                 </div>
@@ -97,9 +91,31 @@
             </form>
         </aside>                
         <main>
-            <h2 id="products">Products</h2>
+            <h2 id="products">Продукти</h2>
             <div class="row products-container">
                <!--Products are dynamically generated here-->
+            </div>
+            <!-- Modal Product Info -->
+            <div class="modal fade" id="productInfoModal" tabindex="-1" role="dialog" aria-labelledby="productInfoLabel" aria-hidden="true">
+            <div class="modal-dialog" role="document">
+                <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="productInfoLabel">Інформація про продукт</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <img class="card-img-top" src="" alt="">
+                    <h4 class="card-title"></h4>
+                    <p class="card-text"></p>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary btn-close" data-dismiss="modal">Закрити</button>
+                    <button class="btn btn-primary buy" data-id="id">Купити</button>
+                </div>
+                </div>
+            </div>
             </div>   
             <!-- Modal Cart -->
             <div class="modal fade" id="modal-cart" tabindex="-1" role="dialog" aria-labelledby="cartLabel" aria-hidden="true">
@@ -117,19 +133,19 @@
                             <div class="container">
                             <form class="form-contacts">
                                 <div class="form-group row">
-                                <label for="client-name" class="col-4 col-form-label">Your name:</label>
+                                <label for="client-name" class="col-4 col-form-label">Ваше імя:</label>
                                 <input class="form-control col-8" type="text" id="client-name" required>
                                 </div>
                                 <div class="form-group row">
-                                <label for="client-email" class="col-4 col-form-label">Your email:</label>
+                                <label for="client-email" class="col-4 col-form-label">Ваш емайл:</label>
                                 <input class="form-control col-8" type="email" id="client-email" required>
                                 </div>
                             </form>
                         </div>
                     </div>
                     <div class="modal-footer">
-                        <button type="button" class="btn btn-secondary btn-close" data-dismiss="modal">Close</button>
-                        <button class="btn btn-primary order">Order</button>
+                        <button type="button" class="btn btn-secondary btn-close" data-dismiss="modal">Закрити</button>
+                        <button class="btn btn-primary order">Замовити</button>
                     </div>
                     </div>
                 </div>
@@ -182,5 +198,6 @@
     <script defer src="js/cart.js"></script>
     <script defer src="js/product-list.js"></script>    
     <script defer src="js/index.js"></script>
+   
 </body>
 </html>

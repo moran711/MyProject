@@ -14,17 +14,17 @@ class ProductList {
     products.forEach(product => {
       productListDomString += `<div class="col-12 col-sm-6 col-md-4 col-lg-3 mb-3">
                   <div class="card product">
-                    <img class="card-img-top" src="img/products/${product.image}" 
+                    <img class="card-img-top" src="img/${product.image}" 
                         alt="${product.title}">
                     <div class="card-body d-flex flex-column">
                       <h4 class="card-title">${product.title}</h4>
                       <p class="card-text flex-fill">${product.description}</p>
                       <div class="d-flex justify-content-around">
                         <button class="btn btn-info" data-toggle="modal"
-                          data-target="#productInfoModal" data-id="${product.id}">Info
+                          data-target="#productInfoModal" data-id="${product.id}" lang="en">Info
                         </button>
-                        <button class="btn btn-primary buy" data-id="${product.id}">
-                          $${product.price} - Buy
+                        <button class="btn btn-primary buy" data-id="${product.id}" lang="en">
+                           ‎₴${product.price} - Buy
                         </button>
                       </div>
                     </div>
@@ -57,13 +57,13 @@ class ProductList {
     const product = await this.productService.getProductById(id);
     const modal = document.querySelector('#productInfoModal');
     const productImg = modal.querySelector('.modal-body .card-img-top');
-    productImg.setAttribute('src', 'img/products/' + product.image);
+    productImg.setAttribute('src', 'img/' + product.image);
     productImg.setAttribute('alt', product.title);
     modal.querySelector('.modal-body .card-title').innerText = product.title;
     modal.querySelector('.modal-body .card-text').innerText =
       product.description;
     const btnBuy = modal.querySelector('button.buy');
-    btnBuy.innerText = `${product.price} - Buy`;
+    btnBuy.innerText = `‎₴${product.price} - Buy`;
     btnBuy.dataset.id = id;
   }
   handleProductBuyClick(event) {
@@ -73,3 +73,5 @@ class ProductList {
     window.showAlert('Product added to cart');
   }
 }
+
+

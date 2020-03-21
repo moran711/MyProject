@@ -239,7 +239,8 @@ main .category{
 .main .filter{
     font-size: 13px;
 }
-.filer-brends .checkbox{
+
+.filer-brends-checkbox{
     display: flex;
     flex-direction: column;
 }
@@ -253,6 +254,21 @@ main .category{
 }
 #products{
     font-size: 15px;
+}
+.card-img-top{
+    height: 400px;
+    width: auto;
+}
+.product{
+    width: 250px;
+    height: 600px;
+    margin-top:10px; 
+}
+.card-title{
+    font-size: 17px
+}
+.card-text{
+    font-size: 13px
 }
 .form-control{
     margin-right : 10px;
@@ -312,6 +328,12 @@ footer .footer-copyright{
         display: grid;
         grid-template-columns: 1fr 1fr;
     }
+    .card-title{
+    font-size: 19px
+    }
+    .card-text{
+        font-size: 14px
+    }
     .footer div p{
          font-size: 15px;
      }
@@ -329,6 +351,12 @@ footer .footer-copyright{
     }
     #products{
     font-size: 25px;
-}
+    }
+    .card-title{
+        font-size: 23px
+    }
+    .card-text{
+        font-size: 15px
+    }
 }
 
