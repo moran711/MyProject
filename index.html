@@ -63,21 +63,19 @@
     <div class="main">
         <aside class="filter">
             <form class="filter-form">
-                <div class="filter-brends" lang="en">
-                    <div class="filter-brends-header" lang="uk">Виберіть бренд</div>
-                    <div class="filter-brends-checkbox">
-                        <label class="filter-brends-item">
-                            <input type="checkbox" name="apple" value="Apple" id="Apple"> Apple
-                        </label>
-                        <label class="filter-brends-item">
-                            <input type="checkbox" name="samsung" value="Samsung" id="Samsung"> Samsung
-                        </label>
-                        <label class="filter-brends-item">
-                            <input type="checkbox" name="xiaomi" value="Xiaomi" id="Xiaomi"> Xiaomi
-                        </label>
-                        <label class="filter-brends-item">
-                            <input type="checkbox" name="realme" value="Realme" id="Realme"> Realme
-                        </label>
+                <div class="dropdown">
+                    <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton"
+                        data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                        Виберіть бренд
+                    </button>
+                    <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                        <div class="dropdown-item" id="Apple" lang="en">Apple</div>
+                        <div class="dropdown-item" id="Samsung" lang="en">Samsung</div>
+                        <div class="dropdown-item" id="Xiaomi" lang="en">Xiaomi</div>
+                        <div class="dropdown-item" id="Realme" lang="en"> Realme</div>
+                        <div class="dropdown-item" id="Huawei" lang="en">Huawei</div>
+                        <div class="dropdown-item" id="Meizu" lang="en">Meizu</div>
+                        <div class="dropdown-item" id="all-brands" >Всі</div>
                     </div>
                 </div>
                 <div class="dropdown">
@@ -181,10 +179,10 @@
                         <div class="input-group-prepend">
                             <div class="input-group-text">&#128386;</div>
                         </div>
-                        <input type="text" class="form-control" id="inlineFormInputGroupUsername2" placeholder="email">
+                        <input type="text" class="form-control" id="inlineFormInputGroupUsername2" placeholder="email" id="subscribe-form">
 
                     </div>
-                    <button type="submit" class="btn btn-primary mb-2">Submit</button>
+                    <button type="submit" class="btn btn-primary mb-2" id="subscribe">Підписатися</button>
                 </form>
             </div>
             <div class="footer-contact-us">
@@ -216,7 +214,6 @@
     <script defer src="js/products-service.js"></script>
     <script defer src="js/cart.js"></script>
     <script defer src="js/product-list.js"></script>
-    <script src="js/sort.js"></script>
     <script defer src="js/index.js"></script>
 
 </body>

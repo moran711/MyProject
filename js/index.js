@@ -19,5 +19,5 @@ copyEmailBtn.addEventListener('click', function(event) {
   // Снятие выделения - ВНИМАНИЕ: вы должны использовать
   // removeRange(range) когда это возможно
   window.getSelection().removeAllRanges();  
-  alert("Емайл скопійований");
+  showAlert("Емайл скопійований");
 });

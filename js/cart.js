@@ -128,7 +128,7 @@ class Cart {
         })
         .catch(error => showAlert('There is an error: ' + error, false));
     } else {
-      window.showAlert('Please fill form correctly', false);
+      window.showAlert('Заповніть форму коректно', false);
     }
   }
 }

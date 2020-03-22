@@ -12,7 +12,7 @@ class ProductList {
     let productListDomString = '';
     const products = await this.productService.getProducts();
     products.forEach(product => {
-      productListDomString += `<div class="col-12 col-sm-6 col-md-4 col-lg-3 mb-3">
+      productListDomString += `<div class="col-12 col-sm-6 col-md-4 col-lg-3 mb-3 ${product.brand}">
                   <div class="card product">
                     <img class="card-img-top" src="img/${product.image}" 
                         alt="${product.title}">
@@ -48,12 +48,19 @@ class ProductList {
         button.addEventListener('click', event =>
           this.handleProductBuyClick(event)
         )
-      ); 
-    document.getElementById('sort-by-price-increase').addEventListener('click', sortByPriceIncrease);
-    document.getElementById('sort-by-price-decrease').addEventListener('click', sortByPriceDecrease);
-    document.getElementById('sort-by-popularity').addEventListener('click', sortByPopularity);
-    document.getElementById('sort-by-name-increase').addEventListener('click', sortByNameIncrease);
-    document.getElementById('sort-by-name-decrease').addEventListener('click', sortByNameDecrease);   
+      );
+    document.getElementById('sort-by-price-increase').addEventListener('click', () => this.sortByPriceIncrease());
+    document.getElementById('sort-by-price-decrease').addEventListener('click', () => this.sortByPriceDecrease());
+    document.getElementById('sort-by-popularity').addEventListener('click', () => this.sortByPopularity());
+    document.getElementById('sort-by-name-increase').addEventListener('click', () => this.sortByNameIncrease());
+    document.getElementById('sort-by-name-decrease').addEventListener('click', () => this.sortByNameDecrease());
+    document.getElementById('Apple').addEventListener('click', () => this.sortByBrandApple());
+    document.getElementById('Samsung').addEventListener('click', () => this.sortByBrandSamsung());
+    document.getElementById('Xiaomi').addEventListener('click', () => this.sortByBrandXiaomi());
+    document.getElementById('Realme').addEventListener('click', () => this.sortByBrandRealme());
+    document.getElementById('Huawei').addEventListener('click', () => this.sortByBrandHuawei());
+    document.getElementById('Meizu').addEventListener('click', () => this.sortByBrandMeizu());
+    document.getElementById('all-brands').addEventListener('click', () => this.sortByBrandAll());
   }
   async handleProductInfoClick(event) {
     const button = event.target; // Button that triggered the modal
@@ -74,7 +81,7 @@ class ProductList {
     const button = event.target;
     const id = button.dataset.id;
     this.cart.addProduct(id);
-    window.showAlert('Product added to cart');
+    window.showAlert('Додано до кошика');
   }
   async sortByPriceIncrease() {
     this.productService = new ProductsService();
@@ -82,7 +89,7 @@ class ProductList {
     products.sort((a, b) => a.price - b.price);
     this.renderProducts();
     this.addEventListeners();
-  } 
+  }
 
   async sortByPriceDecrease() {
     this.productService = new ProductsService();
@@ -114,5 +121,128 @@ class ProductList {
     products.sort((a, b) => b.name - a.name);
     this.renderProducts();
     this.addEventListeners();
+  }
+  sortByBrandApple() {
+    let apple = document.getElementsByClassName('Apple');
+    let samsung = document.getElementsByClassName('Samsung');
+    let xiaomi = document.getElementsByClassName('Xiaomi');
+    let oneplus = document.getElementsByClassName('OnePlus');
+    let huawei = document.getElementsByClassName('Huawei');
+    let realme = document.getElementsByClassName('Realme');
+    let meizu = document.getElementsByClassName('Meizu');
+    this.styleDisplayNone(meizu);
+    this.styleDisplayNone(samsung);
+    this.styleDisplayNone(xiaomi);
+    this.styleDisplayNone(oneplus);
+    this.styleDisplayNone(huawei);
+    this.styleDisplayNone(realme);
+    this.styleDisplayBlock(apple);
+  }
+  sortByBrandSamsung() {
+    let samsung = document.getElementsByClassName('Samsung');
+    let apple = document.getElementsByClassName('Apple');
+    let xiaomi = document.getElementsByClassName('Xiaomi');
+    let oneplus = document.getElementsByClassName('OnePlus');
+    let huawei = document.getElementsByClassName('Huawei');
+    let realme = document.getElementsByClassName('Realme');
+    let meizu = document.getElementsByClassName('Meizu');
+    this.styleDisplayNone(meizu);
+    this.styleDisplayNone(xiaomi);
+    this.styleDisplayNone(oneplus);
+    this.styleDisplayNone(huawei);
+    this.styleDisplayNone(realme);
+    this.styleDisplayNone(apple);
+    this.styleDisplayBlock(samsung);
+  }
+  sortByBrandXiaomi() {
+    let xiaomi = document.getElementsByClassName('Xiaomi');
+    let apple = document.getElementsByClassName('Apple')
+    let samsung = document.getElementsByClassName('Samsung');
+    let oneplus = document.getElementsByClassName('OnePlus');
+    let huawei = document.getElementsByClassName('Huawei');
+    let realme = document.getElementsByClassName('Realme');
+    let meizu = document.getElementsByClassName('Meizu');
+    this.styleDisplayNone(meizu);
+    this.styleDisplayNone(samsung);
+    this.styleDisplayNone(oneplus);
+    this.styleDisplayNone(huawei);
+    this.styleDisplayNone(realme);
+    this.styleDisplayNone(apple);
+    this.styleDisplayBlock(xiaomi);
+  }
+  sortByBrandRealme() {
+    let realme = document.getElementsByClassName('Realme');
+    let apple = document.getElementsByClassName('Apple')
+    let samsung = document.getElementsByClassName('Samsung');
+    let xiaomi = document.getElementsByClassName('Xiaomi');
+    let oneplus = document.getElementsByClassName('OnePlus');
+    let huawei = document.getElementsByClassName('Huawei');
+    let meizu = document.getElementsByClassName('Meizu');
+    this.styleDisplayNone(meizu);
+    this.styleDisplayNone(samsung);
+    this.styleDisplayNone(xiaomi);
+    this.styleDisplayNone(oneplus);
+    this.styleDisplayNone(huawei);
+    this.styleDisplayNone(apple);
+    this.styleDisplayBlock(realme);
+  }
+  sortByBrandHuawei() {
+    let apple = document.getElementsByClassName('Apple')
+    let samsung = document.getElementsByClassName('Samsung');
+    let xiaomi = document.getElementsByClassName('Xiaomi');
+    let oneplus = document.getElementsByClassName('OnePlus');
+    let realme = document.getElementsByClassName('Realme');
+    let huawei = document.getElementsByClassName('Huawei');
+    let meizu = document.getElementsByClassName('Meizu');
+    this.styleDisplayNone(meizu);
+    this.styleDisplayNone(samsung);
+    this.styleDisplayNone(xiaomi);
+    this.styleDisplayNone(oneplus);
+    this.styleDisplayNone(realme);
+    this.styleDisplayNone(apple);
+    this.styleDisplayBlock(huawei);
+  }
+  sortByBrandMeizu() {
+    let apple = document.getElementsByClassName('Apple')
+    let samsung = document.getElementsByClassName('Samsung');
+    let xiaomi = document.getElementsByClassName('Xiaomi');
+    let oneplus = document.getElementsByClassName('OnePlus');
+    let realme = document.getElementsByClassName('Realme');
+    let huawei = document.getElementsByClassName('Huawei');
+    let meizu = document.getElementsByClassName('Meizu');
+    this.styleDisplayBlock(meizu);
+    this.styleDisplayNone(samsung);
+    this.styleDisplayNone(xiaomi);
+    this.styleDisplayNone(oneplus);
+    this.styleDisplayNone(realme);
+    this.styleDisplayNone(apple);
+    this.styleDisplayNone(huawei);
+  }
+  sortByBrandAll() {
+    let apple = document.getElementsByClassName('Apple')
+    let samsung = document.getElementsByClassName('Samsung');
+    let xiaomi = document.getElementsByClassName('Xiaomi');
+    let oneplus = document.getElementsByClassName('OnePlus');
+    let realme = document.getElementsByClassName('Realme');
+    let huawei = document.getElementsByClassName('Huawei');
+    let meizu = document.getElementsByClassName('Meizu');
+    this.styleDisplayNone(meizu);
+    this.styleDisplayBlock(samsung);
+    this.styleDisplayBlock(xiaomi);
+    this.styleDisplayBlock(oneplus);
+    this.styleDisplayBlock(realme);
+    this.styleDisplayBlock(apple);
+    this.styleDisplayBlock(huawei);
+  }
+
+  styleDisplayNone(element) {
+    for (let i = 0; i < element.length; i++){
+      element[i].style.display = 'none';
+    }
+  }
+  styleDisplayBlock(element) {
+    for (let i = 0; i < element.length; i++){
+      element[i].style.display = 'block';
+    }
   }
 }

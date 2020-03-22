@@ -313,7 +313,19 @@ footer .footer-copyright{
     justify-content: center;
     height: 20px;
 }
-
+.alert {
+    position: fixed;
+    top: 50px; 
+    width: 50%;
+    left: 25%;
+    z-index: 1051;
+}
+.dropdown{
+    margin: 10px;
+}
+.dropdown-item{
+    cursor: pointer;
+}
 @media (min-width : 650px){
     body .main{
         display: grid;
