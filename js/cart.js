@@ -86,8 +86,8 @@ class Cart {
   }
   cartLength() {
     let count = 0;
-    for (const key in this.cart){
-        count += this.cart[key]; 
+    for (const key in this.cart) {
+      count += this.cart[key];
     }
     return count;
   }
@@ -95,21 +95,21 @@ class Cart {
     if (this.cartLength() === 0) {
       window.showAlert('Please choose products to order', false);
       return;
-    }    
+    }
     const form = this.cartContainer.querySelector('.form-contacts');
     if (form.checkValidity()) {
       ev.preventDefault();
       fetch('order', {
-        method: 'POST',
-        headers: {
-          'Content-Type': 'application/json'
-        },
-        body: JSON.stringify({
-          clientName: document.querySelector('#client-name').value,
-          clientEmail: document.querySelector('#client-email').value,
-          cart: this.cart
+          method: 'POST',
+          headers: {
+            'Content-Type': 'application/json'
+          },
+          body: JSON.stringify({
+            clientName: document.querySelector('#client-name').value,
+            clientEmail: document.querySelector('#client-email').value,
+            cart: this.cart
+          })
         })
-      })
         .then(response => {
           if (response.status === 200) {
             return response.text();

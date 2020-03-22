@@ -6,7 +6,7 @@ class ProductList {
     this.productService
       .getProducts()
       .then(() => this.renderProducts())
-      .then(() => this.addEventListeners());    
+      .then(() => this.addEventListeners());
   }
   async renderProducts() {
     let productListDomString = '';
@@ -17,14 +17,13 @@ class ProductList {
                     <img class="card-img-top" src="img/${product.image}" 
                         alt="${product.title}">
                     <div class="card-body d-flex flex-column">
-                      <h4 class="card-title">${product.title}</h4>
-                      <p class="card-text flex-fill">${product.description}</p>
+                      <h4 class="card-title">${product.title}</h4>                    
                       <div class="d-flex justify-content-around">
                         <button class="btn btn-info" data-toggle="modal"
                           data-target="#productInfoModal" data-id="${product.id}" lang="en">Info
                         </button>
                         <button class="btn btn-primary buy" data-id="${product.id}" lang="en">
-                           ‎₴${product.price} - Buy
+                          ₴${product.price} - Buy
                         </button>
                       </div>
                     </div>
@@ -49,7 +48,12 @@ class ProductList {
         button.addEventListener('click', event =>
           this.handleProductBuyClick(event)
         )
-      );
+      ); 
+    document.getElementById('sort-by-price-increase').addEventListener('click', sortByPriceIncrease);
+    document.getElementById('sort-by-price-decrease').addEventListener('click', sortByPriceDecrease);
+    document.getElementById('sort-by-popularity').addEventListener('click', sortByPopularity);
+    document.getElementById('sort-by-name-increase').addEventListener('click', sortByNameIncrease);
+    document.getElementById('sort-by-name-decrease').addEventListener('click', sortByNameDecrease);   
   }
   async handleProductInfoClick(event) {
     const button = event.target; // Button that triggered the modal
@@ -72,17 +76,43 @@ class ProductList {
     this.cart.addProduct(id);
     window.showAlert('Product added to cart');
   }
-  async sortProducts() {
-    const product = await this.productService.getProducts();
-    document.querySelectorAll('checkbox-item input')
-    .forEach(input => input.addEventListener('click', sortByBrend ));
-    function sortByBrend(ev) {
-      if (product.brand === ev.id) {
-          renderProducts();
-          console.log(1);
-      }
-    };
+  async sortByPriceIncrease() {
+    this.productService = new ProductsService();
+    const products = await this.productService.getProducts();
+    products.sort((a, b) => a.price - b.price);
+    this.renderProducts();
+    this.addEventListeners();
+  } 
+
+  async sortByPriceDecrease() {
+    this.productService = new ProductsService();
+    const products = await this.productService.getProducts();
+    products.sort((a, b) => b.price - a.price);
+    this.renderProducts();
+    this.addEventListeners();
+  }
+
+  async sortByPopularity() {
+    this.productService = new ProductsService();
+    const products = await this.productService.getProducts();
+    products.sort((a, b) => a.popularity - b.popularity);
+    this.renderProducts();
+    this.addEventListeners();
+  }
+
+  async sortByNameIncrease() {
+    this.productService = new ProductsService();
+    const products = await this.productService.getProducts();
+    products.sort((a, b) => a.name - b.name);
+    this.renderProducts();
+    this.addEventListeners();
+  }
+
+  async sortByNameDecrease() {
+    this.productService = new ProductsService();
+    const products = await this.productService.getProducts();
+    products.sort((a, b) => b.name - a.name);
+    this.renderProducts();
+    this.addEventListeners();
   }
 }
-
-

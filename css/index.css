@@ -256,12 +256,12 @@ main .category{
     font-size: 15px;
 }
 .card-img-top{
-    height: 400px;
-    width: auto;
+    
+    width: 250px;
 }
 .product{
     width: 250px;
-    height: 600px;
+    height: 525px;
     margin-top:10px; 
 }
 .card-title{
@@ -313,6 +313,7 @@ footer .footer-copyright{
     justify-content: center;
     height: 20px;
 }
+
 @media (min-width : 650px){
     body .main{
         display: grid;
