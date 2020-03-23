@@ -1,6 +1,9 @@
 .fa-shopping-cart img{
     height: 20px;
 }
+.countdown-number{
+    margin: 5px;
+}    
 .cart{
     justify-items: end;
 }
