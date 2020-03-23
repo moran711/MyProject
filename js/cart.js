@@ -93,7 +93,7 @@ class Cart {
   }
   order(ev) {
     if (this.cartLength() === 0) {
-      window.showAlert('Please choose products to order', false);
+      window.showAlert('Виберіть продукти, щоб продовжити', false);
       return;
     }
     const form = this.cartContainer.querySelector('.form-contacts');
