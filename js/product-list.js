@@ -12,7 +12,7 @@ class ProductList {
     let productListDomString = '';
     const products = await this.productService.getProducts();
     products.forEach(product => {
-      productListDomString += `<div class="col-12 col-sm-6 col-md-4 col-lg-3 mb-3 ${product.brand}">
+      productListDomString += `<div class="${product.brand}">
                   <div class="card product">
                     <img class="card-img-top" src="img/${product.image}" 
                         alt="${product.title}">
@@ -23,7 +23,7 @@ class ProductList {
                           data-target="#productInfoModal" data-id="${product.id}" lang="en">Info
                         </button>
                         <button class="btn btn-primary buy" data-id="${product.id}" lang="en">
-                          ₴${product.price} - Buy
+                          ₴${product.price/2}  ₴<s>${product.price}</s> Buy
                         </button>
                       </div>
                     </div>
@@ -226,7 +226,7 @@ class ProductList {
     let realme = document.getElementsByClassName('Realme');
     let huawei = document.getElementsByClassName('Huawei');
     let meizu = document.getElementsByClassName('Meizu');
-    this.styleDisplayNone(meizu);
+    this.styleDisplayBlock(meizu);
     this.styleDisplayBlock(samsung);
     this.styleDisplayBlock(xiaomi);
     this.styleDisplayBlock(oneplus);

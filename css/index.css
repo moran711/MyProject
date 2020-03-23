@@ -1,245 +1,19 @@
-/*скидання стилів браузера
-* {
-	box-sizing: border-box;
+.fa-shopping-cart img{
+    height: 20px;
 }
-
-html,
-body,
-div,
-span,
-object,
-iframe,
-h1,
-h2,
-h3,
-h4,
-h5,
-h6,
-p,
-blockquote,
-pre,
-a,
-abbr,
-acronym,
-address,
-big,
-cite,
-code,
-del,
-dfn,
-em,
-img,
-ins,
-kbd,
-q,
-s,
-samp,
-small,
-strike,
-strong,
-sub,
-sup,
-tt,
-var,
-b,
-u,
-i,
-center,
-dl,
-dt,
-dd,
-ol,
-ul,
-li,
-fieldset,
-form,
-label,
-legend,
-table,
-caption,
-tbody,
-tfoot,
-thead,
-tr,
-th,
-td,
-article,
-aside,
-canvas,
-details,
-embed,
-figure,
-figcaption,
-footer,
-header,
-hgroup,
-menu,
-nav,
-output,
-ruby,
-section,
-summary,
-time,
-mark,
-audio,
-video {
-	margin: 0;
-	padding: 0;
-	border: 0;
-	font-size: 100%;
-	vertical-align: baseline;
+.cart{
+    justify-items: end;
 }
-
-article,
-aside,
-details,
-figcaption,
-figure,
-footer,
-header,
-hgroup,
-menu,
-nav,
-section {
-	display: block;
-}
-
-body {
-	line-height: 1.2;
-}
-
-table {
-	border-collapse: collapse;
-	border-spacing: 0;
-}
-
-ol {
-	padding-left: 1.4em;
-	list-style: decimal;
-}
-
-ul {
-	padding-left: 1.4em;
-	list-style: square;
-}
-
-blockquote,
-q {
-	quotes: none;
-}
-
-blockquote:before,
-blockquote:after,
-q:before,
-q:after {
-	content: '';
-	content: none;
-}
-
-/* кінець коду скидання стилів браузера */
-/*
-:root{
-    --main-color: #1a2127;
-    --secondary-color: #f74021;
-    --footer-color:#a5aab0;
-    --header-color:white;
-}
-body{
-    font-family: 'Open Sans', sans-serif, Verdana;
-    max-width: 980px;
-    margin: auto;
-}    
-header{
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-    align-content: center;
-    height: 35px;
-    background-color: var(--main-color);
-}
-.burger-menu{
-    height: 30px;
-    padding-left:10px; 
-    width: 45px;
-}
-.menu{
-    display: none;
-}
-.basket{
-    height: 28px;
-    padding-right: 10px; 
-}
-.buy{
-    font-family: 'Open Sans', sans-serif, Verdana;
-}
-.logo{
-    font-family: 'Trade Winds' ;
-    font-size: 28px;
-    color: var(--header-color);
-}
-main{
-    margin-bottom: 10px;
-}
-.slider-photo img{
-    width: 100%;
-    z-index: -100;
-}
-.slider-navigation{
-    z-index: 100;
-    display: flex;
-}
-.filter{
-    padding-left: 10px;
-    font-size: 14px;
-}
-main .category{
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-} 
-.items .item{
-    width: 280px;
-    margin-top:10px; 
-    height: 620px;
-}
-
-.items .item .item-name{
-    text-align:center;
-}
-.items .item .item-price{
-    padding-left: 10px;
-}
-.category .category-name{
-    font-size: 20px;
-}
-.items .item .buy{
-    text-decoration: none;
-    outline: none;
-    border-radius: 30px;
-    background-image: linear-gradient(45deg, #6ab1d7 0%, #33d9de 50%, #002878 100%);
-    background-position: 100% 0;
-    background-size: 200% 200%;
-    font-family: 'Montserrat', sans-serif;
-    font-size: 16px;
-    font-weight: 300;
-    color: white;
-    box-shadow: 0 16px 32px 0 rgba(0,40,120,.35);
-    transition: .5s;
-    margin: auto;
-    margin-left: 40%;
-    margin-right:  40%;
-}
-
-.items .item .item-pic{
-    width: 270px;
-    height: 500px
-}
-*/
 .main .filter{
     font-size: 13px;
 }
-
+.main{
+    margin-bottom: 10px;
+}
+.timer{
+    display: flex;
+    flex-direction: row;
+}
 .filter-brends-checkbox{
     display: flex;
     flex-direction: column;
@@ -261,8 +35,14 @@ main .category{
 }
 .product{
     width: 250px;
-    height: 525px;
+    height: 550px;
     margin-top:10px; 
+}
+.btn-info{
+    margin: 5px;
+}
+.buy{
+    margin: 5px;
 }
 .card-title{
     font-size: 17px

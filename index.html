@@ -33,9 +33,9 @@
                         <a class="nav-link" href="#footer">Контакти</a>
                     </li>
                 </ul>
-                <div>
+                <div class="cart">
                     <a class="nav-link openCartLink" href="#modal-cart" data-toggle="modal">
-                        <i class="fas fa-shopping-cart"></i>
+                        <i class="fas fa-shopping-cart"><img src="img/basket.png"></i>
                         Cart<span id="cart-badge" class="badge badge-light"></span>
                     </a>
                 </div>
@@ -94,7 +94,27 @@
             </form>
         </aside>
         <main>
+            <h5>Акція 50% знижки на всі смартфони. Залишилось:</h3>
+                <div id="countdown" class="timer">
+                    <div class="countdown-number">
+                      <span class="days countdown-time"></span>
+                      <span class="countdown-text">Днів</span>
+                    </div>
+                    <div class="countdown-number">
+                      <span class="hours countdown-time"></span>
+                      <span class="countdown-text">Годин</span>
+                    </div>
+                    <div class="countdown-number">
+                      <span class="minutes countdown-time"></span>
+                      <span class="countdown-text">Хвилин</span>
+                    </div>
+                    <div class="countdown-number">
+                      <span class="seconds countdown-time"></span>
+                      <span class="countdown-text">Секунд</span>
+                    </div>
+                  </div>
             <h2 id="products">Продукти</h2>
+            
             <div class="row products-container">
                 <!--Products are dynamically generated here-->
             </div>
