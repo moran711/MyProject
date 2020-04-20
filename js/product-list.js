@@ -110,7 +110,7 @@ class ProductList {
   async sortByNameIncrease() {
     this.productService = new ProductsService();
     const products = await this.productService.getProducts();
-    products.sort((a, b) => a.name - b.name);
+    products.sort((a, b) => a.id - b.id);
     this.renderProducts();
     this.addEventListeners();
   }
@@ -118,7 +118,7 @@ class ProductList {
   async sortByNameDecrease() {
     this.productService = new ProductsService();
     const products = await this.productService.getProducts();
-    products.sort((a, b) => b.name - a.name);
+    products.sort((a, b) => b.id - a.id);
     this.renderProducts();
     this.addEventListeners();
   }
